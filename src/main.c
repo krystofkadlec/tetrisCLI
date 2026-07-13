@@ -72,7 +72,7 @@ int main(){
           break;
         case ' ':
           while(move_block_down(field, &ab));
-          interval_counter = 0;
+          interval_counter = DEFAULT_SPEED;
           break;
         case '\x1b':
           getchar();

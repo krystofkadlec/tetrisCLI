@@ -102,7 +102,7 @@ bool is_colliding(uint8_t **f, active_block *ab, point *new_shape){
   }
 
   for(int i = 0; i < sizeof(ab->shape) / sizeof(point); i++){
-    if(world_pos[i].y > FIELD_HEIGHT || world_pos[i].x < 0 || world_pos[i].x > FIELD_WIDTH)
+    if(world_pos[i].y > FIELD_HEIGHT || world_pos[i].x < 0 || world_pos[i].x >= FIELD_WIDTH)
       return true;
 
     if(f[(int)(world_pos[i].y)][(int)(world_pos[i].x)] != 0)
